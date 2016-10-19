@@ -93,3 +93,6 @@ npm install webpack-dev-server -g
 
 //should server and rebuild app on 8080
 webpack-dev-server
+
+
+npm install react --save-dev
