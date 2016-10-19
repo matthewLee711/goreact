@@ -3,13 +3,14 @@ let channels = [
 	{name: 'Software Support'}
 ];
 
+//Individual channel
 var Channel = React.createClass({
   onClick: function() {
-  	console.log("yay");
-  	return null;
+  	console.log("yay", this.props.name);
+  	return this.props.name;
   },
   render: function() {
-    return (
+    return (//renders individual list item to html
       <li onClick={this.onClick}>{this.props.name}</li>
     );
   }
@@ -17,9 +18,9 @@ var Channel = React.createClass({
 
 //Renders multiple channels
 var ChannelList = React.createClass({
-	render: function() {
+	render: function() {//map does iteration
 		return(
-			<ul>
+			<ul> 
 				{this.props.channels.map( channel => {
 						return(
 							<Channel name = {channel.name} />
@@ -31,7 +32,30 @@ var ChannelList = React.createClass({
 	}
 });
 
+//Add new Channels
+var ChannelForm = React.createClass({
+	render: function() {
+		return (
+			<form>
+				<input type='text' />
+			</form>
+		)
+	}
+});
+
+//Parent Component -- renders both parent + child
+var ChannelSection = React.createClass({
+	render : function() { //create property as channel list
+		return (
+			<div>
+				<ChannelList channels={channels}/>
+				<ChannelForm />
+			</div>
+		)
+	}
+});
+
 ReactDOM.render(
-  <ChannelList channels={channels}/>,//create property as channel list
+  <ChannelSection />,
   document.getElementById('app')
 );

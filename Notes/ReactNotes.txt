@@ -22,4 +22,17 @@ Originally you had to bind functions to use them within a component
 ////this.onClick.bind(this) <oldschool method for calling functions
 
 Composition: parent React Component
-Pass the Channel Array as aproperty to the ChannelList(use controller view)
+Pass the Channel Array as a property to the ChannelList(use controller view later)
+Create property for channellist with takes in channel arr.
+
+Dynamically adding channels:
+
+You can only pass a single react 'Parent component' to be rendered
+Each JSX is is converted to a function call, so passing two function calls 
+doesnt make sense
+EX.
+<somecomponent />
+Reac.createElement(SomeComponent, null) <two of these will be passed to
+the document.getelementbyid
+
+SO we need to create something that will pass parent and child components
