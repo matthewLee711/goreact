@@ -44,7 +44,7 @@ var ChannelForm = React.createClass({
   },
 	onChange: function(e) {//e = event param
 		//console.log(e.target.value);
-		//save keyed value into channel state
+		//Save keyed value into channel state
 		this.setState({//initialize state bc DNE
 			channelName: e.target.value
 		});
@@ -53,13 +53,12 @@ var ChannelForm = React.createClass({
 	submit: function(e) {
 		let {channelName} = this.state;
 		console.log(channelName);
-		channels.push({
-			name: channelName
-		});
 		//Clears input
 		this.setState({
 			channelName: ''
 		});
+		//Push changes to parent
+		this.props.addChannel(channelName);
 		e.preventDefault();//prevent request from happenning
 	},
 	render: function() {
@@ -76,11 +75,27 @@ var ChannelForm = React.createClass({
 
 //Parent Component -- renders both parent + child
 var ChannelSection = React.createClass({
-	render : function() { //create property as channel list
+	getInitialState() { //ES5 constructor
+    return { 
+    		channels: [ //other channels share this arr now
+    			{name: 'Hardware Support'},
+					{name: 'Software Support'}	
+    		]
+  	};
+  },
+  //this function allows other components to add to array
+  addChannel: function(name) {
+  	let {channels} = this.state;
+  	channels.push({name: name});
+  	this.setState({ //detect changes and re-renders components
+  		channels: channels
+  	});
+  },
+	render: function() { //channels store state init channel from parent//pass addChannel so can access
 		return (
 			<div>
-				<ChannelList channels={channels}/>
-				<ChannelForm />
+				<ChannelList channels={this.state.channels}/>
+				<ChannelForm addChannel={this.addChannel}/>
 			</div>
 		)
 	}

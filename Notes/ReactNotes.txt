@@ -51,3 +51,10 @@ var ChannelSection = React.createClass({
 		)
 	}
 });
+
+
+
+1. Create addChannel function in Channel section
+2. pass addChannel() function to ChannelForm as property
+3.in ChannelsForms onSubmit(), call passed
+add channel() function
