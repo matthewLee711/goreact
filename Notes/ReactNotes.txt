@@ -25,6 +25,11 @@ Composition: parent React Component
 Pass the Channel Array as a property to the ChannelList(use controller view later)
 Create property for channellist with takes in channel arr.
 
+ARRAY:
+keys keep track of of renders
+Need to re-render array when adding stuff to it
+USE a common parent for components that need access
+
 Dynamically adding channels:
 
 You can only pass a single react 'Parent component' to be rendered
@@ -35,4 +40,14 @@ EX.
 Reac.createElement(SomeComponent, null) <two of these will be passed to
 the document.getelementbyid
 
-SO we need to create something that will pass parent and child components
+SO create a parent component that will pass parent and child components
+var ChannelSection = React.createClass({
+	render : function() { //create property as channel list
+		return (
+			<div>
+				<ChannelList channels={channels}/>
+				<ChannelForm />
+			</div>
+		)
+	}
+});
