@@ -1,3 +1,8 @@
+let channels = [
+	{name: 'Hardware Support'},
+	{name: 'Software Support'}
+];
+
 var Channel = React.createClass({
   onClick: function() {
   	console.log("yay");
@@ -15,13 +20,18 @@ var ChannelList = React.createClass({
 	render: function() {
 		return(
 			<ul>
-				<Channel name='Hardware Support' />
+				{this.props.channels.map( channel => {
+						return(
+							<Channel name = {channel.name} />
+						)
+					}
+				)}
 			</ul>
 		)
 	}
 });
 
 ReactDOM.render(
-  <ChannelList />,
+  <ChannelList channels={channels}/>,//create property as channel list
   document.getElementById('app')
 );

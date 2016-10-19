@@ -22,3 +22,4 @@ Originally you had to bind functions to use them within a component
 ////this.onClick.bind(this) <oldschool method for calling functions
 
 Composition: parent React Component
+Pass the Channel Array as aproperty to the ChannelList(use controller view)
