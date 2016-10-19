@@ -1,14 +1,27 @@
 var Channel = React.createClass({
+  onClick: function() {
+  	console.log("yay");
+  	return null;
+  },
   render: function() {
     return (
-      // <div className="Channel">
-      //   Hello, world! I am a Channel.
-      // </div>
-      <li>{this.props.name}</li>
+      <li onClick={this.onClick}>{this.props.name}</li>
     );
   }
 });
+
+//Renders multiple channels
+var ChannelList = React.createClass({
+	render: function() {
+		return(
+			<ul>
+				<Channel name='Hardware Support' />
+			</ul>
+		)
+	}
+});
+
 ReactDOM.render(
-  <Channel name="Hardware Support"/>,
+  <ChannelList />,
   document.getElementById('app')
 );

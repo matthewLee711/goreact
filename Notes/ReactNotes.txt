@@ -1,0 +1,24 @@
+React:
+JS View Library 
+Babel - translate es2015/2016 syntax in old school es5
+
+//Channel should have components of react
+class Channel extends React.Component
+
+//render
+converts html into jsx or java script code
+
+//Type serve to load up page
+
+Properties: pass information to components (bidirectional)
+<Channel name='Hardware'/>
+Channel will recieve something called name which will adpot it
+//This line below accepts the name set
+{this.props.name}
+//you can use injection for everything. not jjust string
+
+For event handlers:
+Originally you had to bind functions to use them within a component
+////this.onClick.bind(this) <oldschool method for calling functions
+
+Composition: parent React Component
