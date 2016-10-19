@@ -1,0 +1,15 @@
+{
+  "name": "goreact",
+  "version": "1.0.0",
+  "description": "Realtime support frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Lee",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^5.3.3",
+    "webpack": "^1.13.2"
+  }
+}

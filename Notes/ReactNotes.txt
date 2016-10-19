@@ -58,3 +58,38 @@ var ChannelSection = React.createClass({
 2. pass addChannel() function to ChannelForm as property
 3.in ChannelsForms onSubmit(), call passed
 add channel() function
+
+
+npm init - create package.json
+
+
+structure:
+goreact
+	index.css
+	index.html
+	index.js
+	components/
+		App.jsx
+		channels/
+			file for each react component
+		messages/
+		users/
+
+
+Use webpack to bundle up code
+builds a dependency graph
+benefit of webpack stores all files into one tree
+
+webpack.config, need to transpose files as es5
+test will see if need to be transposed by loader
+
+npm install webpack babel-loader@5.3.3 --save-dev
+
+type webpack to see if it works
+
+//automattically rebuild bundle when file
+//changes are made to dependency graph
+npm install webpack-dev-server -g
+
+//should server and rebuild app on 8080
+webpack-dev-server
