@@ -115,3 +115,7 @@ Channels, messages ,users and any other state
 
 
 npm install react-dom --save
+
+function(varname type)
+
+what makes golang awesome is that it focuses on same coding style

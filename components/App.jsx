@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import ChannelSection from './channels/ChannelSection.jsx';
+import UserSection from './users/UserSection.jsx';
 
 var App = React.createClass({
 	getInitialState() { //ES5 constructor
     	return { 
     		channels: [],
+    		users: [],
     		activeChannel: {}
     	};
   },
@@ -19,6 +21,13 @@ var App = React.createClass({
   	this.setState({activeChannel});
   	//Get channels messages
   },
+  setUserName(name) {
+  	let {users} = this.state;
+  	users.push({id: users.length, name});
+  	console.log("good");
+  	this.setState({users});
+  	//sned to server
+  },
 	render() {
 		return(
 			<div className='app'>
@@ -28,6 +37,10 @@ var App = React.createClass({
 						addChannel={this.addChannel}
 						setChannel={this.setChannel} 
 						activeChannel = {this.state.activeChannel}
+					/>
+					<UserSection
+					{...this.state}
+					setUserName={this.setUserName}
 					/>
 				</div>
 			</div>

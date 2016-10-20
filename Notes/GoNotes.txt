@@ -15,3 +15,6 @@ go build
 
 //build and run program
 go run filename
+
+
+leave normal http traffic to nginx and cdn

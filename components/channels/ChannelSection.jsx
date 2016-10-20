@@ -20,9 +20,9 @@ var ChannelSection = React.createClass({
 
 ChannelSection.propTypes = {
 	channels: React.PropTypes.array.isRequired,
-  setChannel: React.PropTypes.func.isRequired,
-  addChannel: React.PropTypes.func.isRequired,
-  activeChannel: React.PropTypes.object.isRequired
+	setChannel: React.PropTypes.func.isRequired,
+	addChannel: React.PropTypes.func.isRequired,
+	activeChannel: React.PropTypes.object.isRequired
 }
 
 export default ChannelSection
