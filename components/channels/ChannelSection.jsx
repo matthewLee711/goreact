@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ChannelForm from './ChannelForm.jsx';
 import ChannelList from './ChannelList.jsx';
 
-var ChannelSection = createClass({
+var ChannelSection = React.createClass({
 	render() {
 		return(
 			<div>
@@ -14,7 +14,7 @@ var ChannelSection = createClass({
 });
 
 ChannelSection.propTypes = {
-	channels: React.Proptypes.array.isRequired,
+	channels: React.PropTypes.array.isRequired,
 	addChannel: React.PropTypes.func.isRequired,
 	setChannel: React.PropTypes.func.isRequired
 }

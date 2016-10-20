@@ -41,7 +41,7 @@ var ChannelForm = React.createClass({
 	// }, // ES6 Constructor
 	getInitialState() { //ES5 constructor
     	return { /* initial state */ };
-  	},
+  },
 	onChange: function(e) {//e = event param
 		//console.log(e.target.value);
 		//Save keyed value into channel state

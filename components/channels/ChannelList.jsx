@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import Channel from './Channel.jsx';
 
-var ChannelList = createClass({
+var ChannelList = React.createClass({
 	render() {
 		return (
 			<ul> {
 				this.props.channels.map( chan => {
-					<Channel 
+					return(
+						<Channel 
 						channel={chan}
-						setChannel={this.props.setChannel} 
-					/>
+						key={chan.id}
+						setChannel={this.props.setChannel} />
+					)
 				})
 			}</ul>
 		)

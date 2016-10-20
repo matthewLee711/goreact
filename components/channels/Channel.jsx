@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-var Channel = createClass({
+var Channel = React.createClass({
 	onClick: function(e) {
 		e.preventDefault();
 		const {setChannel, channel} = this.props;//set as own vars

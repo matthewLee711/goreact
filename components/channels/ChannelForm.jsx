@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-var ChannelForm = createClass({
+var ChannelForm = React.createClass({
 	onSubmit: function(e) {
 		e.preventDefault();
 		const node = this.refs.channel;
@@ -13,8 +13,7 @@ var ChannelForm = createClass({
 			<form onSubmit={this.onSubmit}>
 				<input 
 					type='text'
-					ref='channel'
-				/>
+					ref='channel' />
 			</form>
 		)
 	}

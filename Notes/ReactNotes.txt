@@ -108,3 +108,10 @@ Assign a unique value to a dom element
 //Good for parent rendering multiple channels
 //this copies all parents properties to component
 {...this.props}
+
+App.jsx
+stores state of app
+Channels, messages ,users and any other state
+
+
+npm install react-dom --save
