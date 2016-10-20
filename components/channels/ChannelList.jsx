@@ -8,7 +8,7 @@ var ChannelList = createClass({
 				this.props.channels.map( chan => {
 					<Channel 
 						channel={chan}
-						setChannel={this.props.setChannel}
+						setChannel={this.props.setChannel} 
 					/>
 				})
 			}</ul>

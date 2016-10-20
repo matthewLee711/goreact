@@ -100,3 +100,6 @@ npm install react --save-dev
 
 Document component props
 set a static property on class PropTypes
+
+Refs 
+Assign a unique value to a dom element
