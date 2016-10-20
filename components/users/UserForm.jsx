@@ -5,9 +5,7 @@ var UserForm = React.createClass({
 		e.preventDefault();
 		const node = this.refs.userName;
 		const userName = node.value;
-		console.log("good1");
 		this.props.setUserName(userName);
-		console.log("good2");
 		node.value = '';
 	},
 	render() {
@@ -17,7 +15,7 @@ var UserForm = React.createClass({
 					<input className='form-control'
 						placeholder='Set Your Name'
 						type='text'
-						ref='user' />
+						ref='userName' />
 				</div>
 			</form>
 		)

@@ -24,7 +24,6 @@ var App = React.createClass({
   setUserName(name) {
   	let {users} = this.state;
   	users.push({id: users.length, name});
-  	console.log("good");
   	this.setState({users});
   	//sned to server
   },
@@ -39,8 +38,8 @@ var App = React.createClass({
 						activeChannel = {this.state.activeChannel}
 					/>
 					<UserSection
-					{...this.state}
-					setUserName={this.setUserName}
+						{...this.state}
+						setUserName={this.setUserName}
 					/>
 				</div>
 			</div>
