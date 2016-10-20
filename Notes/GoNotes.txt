@@ -1,1 +1,17 @@
+//make executable
+package main 
 
+//make library
+package blah
+
+
+func is used for printing
+
+//used for printing
+import "fmt"
+
+//compile program
+go build 
+
+//build and run program
+go run filename
