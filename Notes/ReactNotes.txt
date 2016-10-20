@@ -96,3 +96,7 @@ webpack-dev-server
 
 
 npm install react --save-dev
+
+
+Document component props
+set a static property on class PropTypes
