@@ -10,7 +10,9 @@ var ChannelList = React.createClass({
 						<Channel 
 						channel={chan}
 						key={chan.id}
-						setChannel={this.props.setChannel} />
+						//setChannel={this.props.setChannel} 
+						//activeChannel={this.props.activeChannel}
+						{...this.props} />
 					)
 				})
 			}</ul>
@@ -21,7 +23,8 @@ var ChannelList = React.createClass({
 //Properties for this component to receive
 ChannelList.propTypes = {
 	channels: React.PropTypes.array.isRequired,
-	setChannel: React.PropTypes.func.isRequired
+	setChannel: React.PropTypes.func.isRequired,
+	activeChannel: React.PropTypes.object.isRequired
 }
 
 export default ChannelList

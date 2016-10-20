@@ -11,9 +11,12 @@ var ChannelForm = React.createClass({
 	render() {
 		return (
 			<form onSubmit={this.onSubmit}>
-				<input 
+			<div className='form-group'>
+				<input className='form-control'
+					placeholder='Add Channel'
 					type='text'
 					ref='channel' />
+			</div>
 			</form>
 		)
 	}

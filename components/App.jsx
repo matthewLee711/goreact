@@ -4,7 +4,8 @@ import ChannelSection from './channels/ChannelSection.jsx';
 var App = React.createClass({
 	getInitialState() { //ES5 constructor
     	return { 
-    		channels: []
+    		channels: [],
+    		activeChannel: {}
     	};
   },
   addChannel: function(name) {
@@ -20,11 +21,16 @@ var App = React.createClass({
   },
 	render() {
 		return(
-			<ChannelSection 
-				channels={this.state.channels}
-				addChannel={this.addChannel}
-				setChannel={this.setChannel}
-			/>
+			<div className='app'>
+				<div className='nav'>
+					<ChannelSection 
+						channels={this.state.channels}
+						addChannel={this.addChannel}
+						setChannel={this.setChannel} 
+						activeChannel = {this.state.activeChannel}
+					/>
+				</div>
+			</div>
 		)
 	}
 });
