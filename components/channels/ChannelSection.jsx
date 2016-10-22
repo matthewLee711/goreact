@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ChannelForm from './ChannelForm.jsx';
 import ChannelList from './ChannelList.jsx';
 
+//Renders channel list and form
 var ChannelSection = React.createClass({
 	render() {
 		return(

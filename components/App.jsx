@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
 import ChannelSection from './channels/ChannelSection.jsx';
 import UserSection from './users/UserSection.jsx';
+import MessageSection from './messages/MessageSection.jsx';
 
+//Renders all parent components and required functions
 var App = React.createClass({
 	getInitialState() { //ES5 constructor
     	return { 
     		channels: [],
     		users: [],
+    		messages: [],
+    		message: {},
     		activeChannel: {}
     	};
   },
@@ -21,11 +25,20 @@ var App = React.createClass({
   	this.setState({activeChannel});
   	//Get channels messages
   },
-  setUserName(name) {
+  setUserName: function(name){
   	let {users} = this.state;
   	users.push({id: users.length, name});
   	this.setState({users});
   	//sned to server
+  },
+  addMessage: function(body){
+  	//pull messages + user out of state object
+  	let {messages, users} = this.state;
+  	let createdAt = new Date;
+  	let author = users.length > 0 ? users[0].name : 'anonymous';
+  	messages.push({id: messages.length, body, createdAt, author});
+  	this.setState({messages});
+  	//send to server!
   },
 	render() {
 		return(
@@ -40,6 +53,10 @@ var App = React.createClass({
 					<UserSection
 						{...this.state}
 						setUserName={this.setUserName}
+					/>
+					<MessageSection
+						{...this.state}
+						addMessage={this.addMessage}
 					/>
 				</div>
 			</div>
