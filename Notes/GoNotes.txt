@@ -18,3 +18,19 @@ go run filename
 
 
 leave normal http traffic to nginx and cdn
+
+//we'll leave go for web socket traffic only
+
+Webscokets in modern browsers
+-allow connections to any host (no browser based same - origin policy)
+origin policy - is it ok to make connection to server
+func(r * http.Request) bool {return true},
+allows connections from any origin
+
+upgrader 
+attempts to hijack connection and switch protocols http -> websocket
+
+:= declar variable of infered type
+SO
+var blah = whatever
+blah := whatever
