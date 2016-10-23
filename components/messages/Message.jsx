@@ -5,7 +5,7 @@ var Message = React.createClass({
 	render() {
 		//console.log(message);
 		//message doesnt work bc same name?
-		let messsage = this.props;//this doesnt work for some reason 
+		let {messsage} = this.props;//this doesnt work for some reason 
 		let info = this.props;
 		console.log(info);
 		//let createdAt = fecha.format(new Date(info.createdAt), 'HH:mm:ss MM/DD/YY');

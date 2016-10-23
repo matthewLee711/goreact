@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Message from './Message.jsx';
 
+//Pass key + message to Message.jsx to render new user message
 var MessageList = React.createClass({
 	render() {//renders all messages in messages
 		console.log("render msg list");
