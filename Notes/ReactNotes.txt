@@ -121,6 +121,7 @@ function(varname type)
 what makes golang awesome is that it focuses on same coding style
 
 //Websocket message format
+//useful for receiving bc "name" can identify type
 let msg = {
 	name: 'event identifier',
 	data: {...}

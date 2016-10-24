@@ -34,3 +34,39 @@ attempts to hijack connection and switch protocols http -> websocket
 SO
 var blah = whatever
 blah := whatever
+:= short variable declarations
+
+struct
+collection of fields and methods
+decode json byte array into struct
+In a struct, Captial Letter
+Ex. Name means it is public
+lower n is private
+
+interface
+Specifies the behavior of an object
+Similar to java, you can implement the interface's function
+
+Prints in go syntax
+fmt.Printf("%#v\n", recMessage)
+
+func name (parameters) (return) {
+	
+}
+
+type assertion
+channelMap := data.(map[string]interface{})
+key = string value = interfaces{}
+the value of the name property is a string
+It just grabs the raw type of the data
+
+//websockets
+go get github.com//gorilla
+//
+go get github.com/mitchellh/mapstructure
+
+field tags
+`stuff`
+means provide special details for
+use field tags to replace Name with name
+when encoding json
